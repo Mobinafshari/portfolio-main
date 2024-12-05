@@ -12,10 +12,10 @@
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: hsla(200, 100%, 95%, 1); /* Very soft light blue */
+  --clr-primary-300: hsla(200, 90%, 70%, 1); /* Light blue */
+  --clr-primary-400: hsla(200, 80%, 60%, 1); /* Medium-light blue */
+  --clr-primary-500: hsla(200, 100%, 50%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -43,6 +43,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: cursive;
 }
 
 /* Remove default margin */
@@ -142,8 +143,6 @@ section,
   padding: min(10vh, 10em) 0;
 }
 
-
-
 /* //////////////////////
   Utility Classes
   /////////////////////// */
@@ -190,29 +189,46 @@ section,
 .section-title {
   font-size: var(--fs-600);
 }
-
-
+/* 
+Main Section
+*/
+.main-section {
+  height: 100vh;
+  /* background-image: linear-gradient(to bottom , white 10%, rgb(224, 224, 241), rgb(212, 212, 248) 60% , rgb(179, 179, 241)); */
+  padding: 0;
+  position: relative;
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+}
 /* //////////////////////
   Header
   /////////////////////// */
 
 .page-header {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 .page-header__content {
   display: flex;
   justify-content: space-between;
 }
-
+.nav {
+  display: flex;
+  align-items: center;
+}
 .nav-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 50px;
 }
 
 .nav-list a {
   color: var(--clr-neutral-900);
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-list a:focus,
@@ -220,7 +236,36 @@ section,
   color: var(--clr-primary-400);
   text-decoration: underline;
 }
-
+.logo {
+  width: 70px;
+  object-fit: cover;
+}
+/* 
+About Me
+*/
+.wrapper {
+  padding: 0 7rem;
+}
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.about-me__pic {
+  width: 400px;
+  object-fit: cover;
+}
+.about-me__text h1 {
+  font-size: 40px;
+  text-align: center;
+  font-family: inherit;
+}
+.about-me__text p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 35px;
+}
 /* //////////////////////
   Footer
   /////////////////////// */
@@ -270,15 +315,15 @@ section,
   Individual article page
   /////////////////////// */
 
-  .main-article {
-    margin-bottom: 3rem;
-  }
+.main-article {
+  margin-bottom: 3rem;
+}
 
-  .main-article__figure figcaption {
-    margin: 1rem 0;
-    font-size: var(--fs-300);
-    opacity: .9;
-  }
+.main-article__figure figcaption {
+  margin: 1rem 0;
+  font-size: var(--fs-300);
+  opacity: 0.9;
+}
 
 /* //////////////////////
   Article snippets
@@ -330,7 +375,7 @@ section,
 .snippet__title a:hover,
 .snippet__title a:focus {
   color: var(--clr-primary-500);
-} 
+}
 
 @media (min-width: 45em) {
   .snippet {
@@ -370,7 +415,7 @@ section,
 .btn--primary:hover,
 .btn--primary:focus {
   background: var(--clr-primary-500);
-  border-color: var(--clr-primary-500); 
+  border-color: var(--clr-primary-500);
 }
 
 .btn--neutral {
