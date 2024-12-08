@@ -140,7 +140,7 @@ strong {
 
 section,
 .section {
-  padding: min(10vh, 10em) 0;
+  padding: min(10vh, 7em) 0;
 }
 
 /* //////////////////////
@@ -174,7 +174,11 @@ section,
 .text-center {
   text-align: center;
 }
-
+@media (max-width:576px) {
+  .container{
+    padding: 0;
+  }
+}
 /* typgraphy */
 
 .article-title,
@@ -208,7 +212,6 @@ Main Section
   position: absolute;
   top: -81px;
   right: -67px;
-  /* right: 675px; */
   opacity: 0.3;
 }
 @media (max-width: 992px) {
@@ -254,6 +257,14 @@ Main Section
 .logo {
   width: 70px;
   object-fit: cover;
+}
+@media (max-width: 576px) {
+  .logo-wrapper{
+    display: none;
+  }
+  .page-header{
+    display: flex;
+  }
 }
 /* 
 About Me
@@ -364,6 +375,43 @@ Skills
     grid-template-columns: repeat(2, 1fr);
   }
   .skills-wrapper {
+    padding: 0;
+  }
+}
+/* 
+Reach me
+*/
+.reach-me__heading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: inherit;
+  position: relative;
+  display: inline-block;
+}
+.reach-me__heading-wrapper{
+  text-align: center;
+}
+.wave-three{
+  position: absolute;
+  top: -81px;
+  right: 0;
+  opacity: 0.3;
+}
+.reach-me{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+  gap: 30px;
+}
+.reach-me__items{
+  cursor: pointer;
+  display: inline-block;
+  /* width: 100%; */
+  text-decoration: none;
+}
+@media (max-width:576px) {
+  .reach-me{
     padding: 0;
   }
 }
