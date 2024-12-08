@@ -194,13 +194,27 @@ Main Section
 */
 .main-section {
   height: 100vh;
-  /* background-image: linear-gradient(to bottom , white 10%, rgb(224, 224, 241), rgb(212, 212, 248) 60% , rgb(179, 179, 241)); */
   padding: 0;
   position: relative;
 }
-.wave {
+
+.wave-one {
   position: absolute;
-  bottom: 0;
+  top: -50px;
+  right: 150px;
+  opacity: 0.3;
+}
+.wave-two {
+  position: absolute;
+  top: -63px;
+  right: -48px;
+  /* right: 675px; */
+  opacity: 0.3;
+}
+@media (max-width: 992px) {
+  /* .wave{
+    display: none;
+  } */
 }
 /* //////////////////////
   Header
@@ -236,6 +250,7 @@ Main Section
   color: var(--clr-primary-400);
   text-decoration: underline;
 }
+
 .logo {
   width: 70px;
   object-fit: cover;
@@ -248,12 +263,16 @@ About Me
 }
 .about-me {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 60% 40%;
+  gap: 40px;
 }
 .about-me__pic {
   width: 400px;
   object-fit: cover;
+}
+.about-me__text {
+  padding-top: 30px;
+  position: relative;
 }
 .about-me__text h1 {
   font-size: 40px;
@@ -263,8 +282,93 @@ About Me
 .about-me__text p {
   text-align: center;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
   line-height: 35px;
+}
+@media (max-width: 1200px) {
+  .about-me__text h1 {
+    font-size: 30px;
+  }
+  .about-me__text p {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  .about-me__text {
+    padding-top: 40px;
+  }
+  .about-me__pic {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .about-me {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .about-me__pic img {
+    width: 330px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    padding: 0 27px;
+  }
+}
+@media (max-width: 576px) {
+  .about-me__text p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 20px;
+  }
+}
+
+/* /////////
+Skills
+/////////*/
+.skills-wrapper {
+  padding: 100px;
+  /* position: relative; */
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+}
+.skill {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--clr-primary-500);
+  text-decoration-thickness: 2px;
+  transition: all 0.3s;
+  display: inline-block;
+  width: 100%;
+}
+
+.skill:hover {
+  transform: scale(1.2);
+}
+.skills__heading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: inherit;
+  position: relative;
+  display: inline-block;
+}
+.skills__heading-wrapper{
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-wrapper {
+    padding: 0;
+  }
 }
 /* //////////////////////
   Footer
