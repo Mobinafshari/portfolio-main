@@ -158,7 +158,7 @@ section,
 .container {
   margin-inline: auto;
   padding-inline: 1.5em;
-  max-width: 72rem;
+  max-width: 80rem;
 }
 
 .container--narrow {
@@ -201,13 +201,13 @@ Main Section
 .wave-one {
   position: absolute;
   top: -50px;
-  right: 150px;
+  right: 80px;
   opacity: 0.3;
 }
 .wave-two {
   position: absolute;
-  top: -63px;
-  right: -48px;
+  top: -81px;
+  right: -67px;
   /* right: 675px; */
   opacity: 0.3;
 }
@@ -325,10 +325,7 @@ About Me
 /* /////////
 Skills
 /////////*/
-.skills-wrapper {
-  padding: 100px;
-  /* position: relative; */
-}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
