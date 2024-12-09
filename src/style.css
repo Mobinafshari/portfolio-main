@@ -174,8 +174,8 @@ section,
 .text-center {
   text-align: center;
 }
-@media (max-width:576px) {
-  .container{
+@media (max-width: 576px) {
+  .container {
     padding: 0;
   }
 }
@@ -259,10 +259,10 @@ Main Section
   object-fit: cover;
 }
 @media (max-width: 576px) {
-  .logo-wrapper{
+  .logo-wrapper {
     display: none;
   }
-  .page-header{
+  .page-header {
     display: flex;
   }
 }
@@ -282,7 +282,7 @@ About Me
   object-fit: cover;
 }
 .about-me__text {
-  padding-top: 30px;
+  padding-top: 15px;
   position: relative;
 }
 .about-me__text h1 {
@@ -362,7 +362,7 @@ Skills
   position: relative;
   display: inline-block;
 }
-.skills__heading-wrapper{
+.skills__heading-wrapper {
   text-align: center;
 }
 @media (max-width: 992px) {
@@ -389,22 +389,22 @@ Reach me
   display: inline-block;
 }
 
-.reach-me__heading-wrapper{
+.reach-me__heading-wrapper {
   text-align: center;
 }
-.wave-three{
+.wave-three {
   position: absolute;
   top: -81px;
   right: 0;
   opacity: 0.3;
 }
-.reach-me{
+.reach-me {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 100px;
 }
-.reach-me__items{
+.reach-me__items {
   cursor: pointer;
   display: inline-block;
   width: 100%;
@@ -412,8 +412,16 @@ Reach me
   display: flex;
   justify-content: center;
 }
-@media (max-width:576px) {
-  .reach-me{
+.reach-me__items-img {
+  width: 40px;
+  height: 40px;
+}
+a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 576px) {
+  .reach-me {
     padding: 0;
   }
 }
