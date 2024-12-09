@@ -402,13 +402,14 @@ Reach me
   align-items: center;
   justify-content: center;
   padding: 0 100px;
-  gap: 30px;
 }
 .reach-me__items{
   cursor: pointer;
   display: inline-block;
-  /* width: 100%; */
+  width: 100%;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 @media (max-width:576px) {
   .reach-me{
