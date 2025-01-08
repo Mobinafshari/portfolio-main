@@ -3,3 +3,5 @@
 <p>Visit it here: 
   <a href="https://mobin-afshari.netlify.app/" target="_blank">https://mobin-afshari.netlify.app/</a>
 </p>
+
+![portfolio](https://github.com/user-attachments/assets/5372eb27-dabb-4a93-b5af-3efd6f317bae)
