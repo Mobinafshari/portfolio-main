@@ -5,12 +5,11 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: "Roboto", sans-serif;
-  --ff-heading: "Playfair Display", serif;
+  --ff-body: "Childhood" , "Roboto", sans-serif;
+  --ff-heading: "Childhood" , "Playfair Display", serif;
 
   --fw-400: 400;
   --fw-700: 700;
-  --fw-900: 900;
 
   --clr-primary-200: hsla(200, 100%, 95%, 1); /* Very soft light blue */
   --clr-primary-300: hsla(200, 90%, 70%, 1); /* Light blue */
@@ -43,7 +42,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: 'Childhood' , sans-serif;
 }
 
 /* Remove default margin */
@@ -121,7 +120,7 @@ select {
   /////////////////////// */
 
 body {
-  font-family: var(--ff-body);
+  font-family: "Childhood", var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
 }
@@ -129,8 +128,8 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--ff-heading);
-  font-weight: var(--fw-900);
+  font-family: "Childhood", var(--ff-heading);
+  font-weight: var(--fw-400);
   line-height: 1.1;
 }
 
@@ -579,7 +578,7 @@ a {
 
 .btn--neutral {
   background-color: var(--clr-neutral-100);
-  color: var(--clr-neutral-900);
+  color: var (--clr-neutral-900);
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-neutral-900);
 }
