@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Childhood";
-  src: url('./assets/font/Child-Hood.otf') format("OpenType");
+  font-family: "Wotfard";
+  src: url('./assets/font/wotfard-regular-webfont.ttf') format("TrueType");
 }
 :root {
   --fs-300: 0.9375rem;
@@ -9,8 +9,8 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: "Childhood" , "Roboto", sans-serif;
-  --ff-heading: "Childhood" ,"Playfair Display", serif;
+  --ff-body: "Wotfard" , "Roboto", sans-serif;
+  --ff-heading: "Wotfard" ,"Playfair Display", serif;
 
   --fw-400: 400;
   --fw-700: 400;
@@ -46,7 +46,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Childhood" , sans-serif;
+  font-family: "Wotfard" , sans-serif;
 }
 
 /* Remove default margin */
@@ -251,7 +251,6 @@ Main Section
   /* color: var(--clr-neutral-900); */
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
 }
 
 .nav-list a:focus,
@@ -271,6 +270,9 @@ Main Section
   .page-header {
     display: flex;
   }
+}
+.nav-list{
+  gap: 30px;
 }
 /* 
 About Me
@@ -293,21 +295,21 @@ About Me
 }
 .about-me__text h1 {
   font-size: 40px;
+  font-weight: 700;
   text-align: center;
   font-family: inherit;
 }
 .about-me__text p {
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   margin-top: 15px;
-  line-height: 35px;
+  line-height: 30px;
 }
 @media (max-width: 1200px) {
   .about-me__text h1 {
     font-size: 35px;
   }
   .about-me__text p {
-    font-size: 25px;
     margin-top: 10px;
     line-height: 30px;
   }
@@ -353,7 +355,7 @@ Skills
   text-decoration: underline;
   text-decoration-color: var(--clr-primary-500);
   text-decoration-thickness: 2px;
-  font-size: 22px;
+  font-size: 18px;
   transition: all 0.3s;
   display: inline-block;
   width: 100%;
@@ -384,6 +386,9 @@ Skills
   }
   .skills-wrapper {
     padding: 0;
+  }
+  .skill{
+    font-size: 16px;
   }
 }
 /* 
