@@ -281,6 +281,24 @@ Main Section
   display: flex;
   gap: 50px;
 }
+.logo-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+#moon{
+  display: none;
+}
+#sun{
+  display: inline-block;
+}
+.theme-changer{
+  width: 30px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: pointer;
+}
 
 .nav-list a {
   /* color: var(--clr-neutral-900); */
