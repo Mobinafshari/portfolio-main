@@ -25,7 +25,7 @@
   --clr-primary-500: hsla(200, 100%, 50%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
-  --clr-neutral-300: hsla(0, 0%, 50%, 1);
+  --clr-neutral-300: hsla(0, 0%, 45%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
   --clr-neutral-500: hsla(0, 0%, 60%, 1);
   --clr-neutral-900: hsla(0, 0%, 10%, 1);
@@ -386,7 +386,7 @@ Main Hero
 
  .intro-greeting {
    font-size: 1.5rem;
-   color: #64748b;
+   color: var(--clr-neutral-300);
    font-weight: 300;
    margin-bottom: 1rem;
    letter-spacing: 0.05em;
@@ -398,7 +398,8 @@ Main Hero
    font-family: 'Orbitron', monospace;
    font-size: 3.5rem;
    font-weight: 900;
-background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);   background-size: 400% 400%;
+background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
+   background-size: 400% 400%;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-clip: text;
@@ -409,7 +410,7 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);   backg
 
  .intro-title {
    font-size: 1.8rem;
-   color: #e2e8f0;
+   color: var(--clr-neutral-900);
    font-weight: 500;
    letter-spacing: 0.05em;
    margin-bottom: 0.5rem;
@@ -419,15 +420,15 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);   backg
 
  .intro-subtitle {
    font-size: 1.1rem;
-   color: #94a3b8;
-   font-weight: 400;
+  color: var(--clr-neutral-300);
+     font-weight: 400;
    opacity: 0;
    animation: fadeInUp 1s ease-out 1.7s forwards;
  }
 
  .lottie-container {
-   width: 300px;
-   height: 300px;
+   width: 500px;
+   height: 400px;
    opacity: 0;
    animation: fadeInScale 1.5s ease-out 2s forwards;
  }
