@@ -1,6 +1,5 @@
-const { DateTime } = require("luxon");
-
-module.exports = function (eleventyConfig) {
+import { DateTime } from "luxon";
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/style.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/script");
@@ -18,4 +17,4 @@ module.exports = function (eleventyConfig) {
       port: 8000,
     },
   };
-};
+}

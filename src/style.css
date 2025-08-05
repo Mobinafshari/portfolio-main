@@ -25,6 +25,7 @@
   --clr-primary-500: hsla(200, 100%, 50%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-neutral-200: hsla(0, 0%, 30%, 1);
   --clr-neutral-300: hsla(0, 0%, 45%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
   --clr-neutral-500: hsla(0, 0%, 60%, 1);
@@ -38,6 +39,7 @@
   --clr-primary-500: hsla(200, 100%, 40%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 10%, 1);
+  --clr-neutral-200: hsla(0, 0%, 70%, 1);
   --clr-neutral-300: hsla(0, 0%, 60%, 1);
   --clr-neutral-400: hsla(0, 0%, 70%, 1);
   --clr-neutral-500: hsla(0, 0%, 80%, 1);
@@ -52,6 +54,7 @@
     --clr-primary-500: hsla(200, 100%, 40%, 1);
 
     --clr-neutral-100: hsla(0, 0%, 10%, 1);
+  --clr-neutral-200: hsla(0, 0%, 70%, 1);
     --clr-neutral-300: hsla(0, 0%, 60%, 1);
     --clr-neutral-400: hsla(0, 0%, 70%, 1);
     --clr-neutral-500: hsla(0, 0%, 80%, 1);
@@ -301,7 +304,7 @@ Main Section
 }
 
 .nav-list a {
-  /* color: var(--clr-neutral-900); */
+  color: var(--clr-neutral-200);
   text-decoration: none;
   font-weight: bold;
 }
