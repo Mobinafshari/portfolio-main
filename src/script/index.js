@@ -1,3 +1,4 @@
+
 const html = document.documentElement;
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
@@ -20,3 +21,18 @@ setTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
 sun.addEventListener("click", () => setTheme("light"));
 moon.addEventListener("click", () => setTheme("dark"));
+
+// // Initialize the gradient background
+// let gradientBackground;
+
+// window.addEventListener("load", () => {
+//   gradientBackground = new AnimatedGradientBackground();
+// });
+
+// // Cleanup on page unload
+// window.addEventListener("beforeunload", () => {
+//   if (gradientBackground) {
+//     gradientBackground.destroy();
+//   }
+// });
+

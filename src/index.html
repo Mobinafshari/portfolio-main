@@ -23,12 +23,12 @@
             <div class="logo-wrapper">
               <img class="theme-changer " id="sun" src="assets/sun.png"/>
               <img class="theme-changer " id="moon" src="assets/full-moon.png"/>
-              <a href="/">
+              <!-- <a href="/">
                 <img
                   src="assets/Logo.png"
                   class="logo"
                   fill="var(--logo-color, #000)" />
-              </a>
+              </a> -->
             </div>
             <nav class="nav">
               <ul role="list" class="nav-list">
@@ -54,94 +54,36 @@
         </div>
       </header>
       <main>
-        <div class="container">
-          <section class="wrapper">
-            <section class="about-me">
-              <article class="about-me__text">
-                <h1>Hi there! I'm Mobin </h1>
-                <p>
-                  I began my journey as a <strong>Frontend Developer</strong> 2
-                  years ago.
-                </p>
-                <p>
-                  I started my career at
-                  <strong style="color: hsla(200, 100%, 50%, 1)"
-                    >Billimob</strong
-                  >, then decided to continue my journey in a larger and more
-                  complex company,
-                  <strong style="color: hsla(200, 100%, 50%, 1)">Rayka</strong>,
-                  collaborating closely with a large team to build and enhance
-                  our products.
-                </p>
-                <p>
-                  I'm committed to excellence and continuous improvement.You can
-                  get my resume from
-                  <strong
-                    ><a
-                      style="color: hsla(200, 100%, 50%, 1)"
-                      href="assets/mobin-afshari.pdf"
-                      download="mobin-afshari.pdf"
-                      >here</a
-                    ></strong
-                  >
-                </p>
-                <svg
-                  class="wave-one"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="200"
-                  height="200"
-                  fill="none"
-                  viewBox="0 0 58 47"
-                  version="1.1"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xmlns:svgjs="http://svgjs.dev/svgjs">
-                  <path
-                    fill="rgba(101, 132, 223, 1)"
-                    d="M16.6 7.9c-3.3-6 7.4-9.1 13.7-4.5 9.8-7 21.1 1.6 16.1 8.2C55.9 8 62.2 23 51.2 25.3c3.9 14.6-9 13-13.3 9.7 6.3 7.5-6 12.4-12.1 8-5.8 5.6-21.6 3.5-17-5C.4 39.9-4.8 22.9 7.5 20.7c-6.2-6-3.6-13.6 9.1-12.8Z"></path>
-                </svg>
-              </article>
-              <figure class="about-me__pic">
-                <img src="./assets/banner-image.png" alt="main page pic" />
-              </figure>
-            </section>
-          </section>
-        </div>
-        <div class="container">
-          <section class="skills-wrapper">
-            <div class="skills__heading-wrapper">
-              <h2 class="skills__heading">
-                Skills
-                <svg
-                  class="wave-two"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="200"
-                  height="200"
-                  fill="none"
-                  viewBox="0 0 64 43"
-                  version="1.1"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xmlns:svgjs="http://svgjs.dev/svgjs">
-                  <path
-                    fill="rgba(101, 132, 223, 1)"
-                    d="M49.1 7.5c-.5 0-.9 0-1.4.1C43.9 3.4 38.5.8 32.4.8c-6.1 0-11.6 2.7-15.4 7-.8-.1-1.7-.2-2.5-.2-7.7 0-14 6.3-14 14s6.2 14 14 14c.9 0 1.7-.1 2.5-.2 3.8 4.3 9.3 7 15.4 7s11.5-2.6 15.3-6.8c.5 0 .9.1 1.4.1 7.7 0 14-6.3 14-14 0-7.9-6.3-14.2-14-14.2Z"></path>
-                </svg>
-              </h2>
+        <div class="hero-container">
+          <!-- Animated Gradient Background -->
+          <div class="animated-gradient-background">
+            <div class="gradient-inner" id="gradientInner"></div>
+          </div>
+        
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <!-- Intro Section -->
+            <div class="intro-section">
+              <div class="intro-greeting">Hello Friend!, I'm</div>
+              <h1 class="intro-name">Mobin Afshari</h1>
+              <h2 class="intro-title">Frontend Developer</h2>
+              <p class="intro-subtitle">Transforming Ideas into Interfaces</p>
             </div>
-            <div class="skills">
-              <p class="skill">HTML/CSS</p>
-              <p class="skill">JavaScript</p>
-              <p class="skill">TypeScript</p>
-              <p class="skill">React</p>
-              <p class="skill">Next</p>
-              <p class="skill">Sass/Tailwind/Mui</p>
-              <p class="skill">Vitest/Cypress</p>
-              <p class="skill">Redux/Zustand</p>
-              <p class="skill">Git/Jira</p>
-              <p class="skill">CI/CD</p>
+        
+            <!-- Lottie Animation -->
+            <div class="lottie-container">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://lottie.host/8cf4ba71-e5fb-44f3-8134-178c4d389417/0CCsdcgNIP.json"
+                background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay>
+              </lottie-player>
             </div>
-          </section>
+        
+        
+          </div>
         </div>
-        <div class="container">
+
+       
+        <!-- <div class="container">
           <section>
             <div class="reach-me__heading-wrapper">
               <h2 class="reach-me__heading">
@@ -203,16 +145,11 @@
               </a>
             </div>
           </section>
-        </div>
-        <div class="container">
-          <section>
-            <div class="reach-me__heading-wrapper">
-              <h2 class="reach-me__heading">Projects Soon...</h2>
-            </div>
-          </section>
-        </div>
+        </div> -->
+       
       </main>
     </section>
   </body>
-  <script src="./script/index.js"></script>
+  
+  <script type="module" src="./script/index.js"></script>
 </html>
