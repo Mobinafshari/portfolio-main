@@ -245,23 +245,25 @@ Main Section
   position: relative;
 }
 
-.wave-one {
-  position: absolute;
-  top: -50px;
-  right: 80px;
-  opacity: 0.3;
+/*
+  Transition for theme toggling
+*/
+
+::view-transition-old(root){
+  animation-delay:  1500ms;
 }
-.wave-two {
-  position: absolute;
-  top: -81px;
-  right: -67px;
-  opacity: 0.3;
+::view-transition-new(root){
+  animation: circle-in 1500ms;
 }
-@media (max-width: 992px) {
-  /* .wave{
-    display: none;
-  } */
+@keyframes circle-in{
+  from{
+    clip-path: circle(0% at 50% 0%);
+  }
+  to{
+    clip-path: circle(120% at 50% 0%);
+  }
 }
+
 /* //////////////////////
   Header
   /////////////////////// */

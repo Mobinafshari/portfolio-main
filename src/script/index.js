@@ -1,4 +1,3 @@
-
 const html = document.documentElement;
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
@@ -19,8 +18,20 @@ const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 setTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
-sun.addEventListener("click", () => setTheme("light"));
-moon.addEventListener("click", () => setTheme("dark"));
+sun.addEventListener("click", () => {
+  if (!document.startViewTransition) {
+    setTheme("light");
+    return;
+  }
+  document.startViewTransition(() => setTheme("light"));
+});
+moon.addEventListener("click", () => {
+  if (!document.startViewTransition) {
+    setTheme("dark");
+    return;
+  }
+  document.startViewTransition(() => setTheme("dark"));
+});
 
 // // Initialize the gradient background
 // let gradientBackground;
@@ -35,4 +46,3 @@ moon.addEventListener("click", () => setTheme("dark"));
 //     gradientBackground.destroy();
 //   }
 // });
-
