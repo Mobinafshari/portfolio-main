@@ -322,9 +322,7 @@ Main Section
   object-fit: cover;
 }
 @media (max-width: 576px) {
-  .logo-wrapper {
-    display: none;
-  }
+
   .page-header {
     display: flex;
   }
@@ -384,7 +382,7 @@ Main Hero
  }
 
  .intro-section {
-   margin-bottom: 3rem;
+   /* margin-bottom: 2rem; */
    opacity: 0;
    animation: fadeInUp 1.2s ease-out 0.5s forwards;
  }
@@ -432,8 +430,8 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
  }
 
  .lottie-container {
-   width: 500px;
-   height: 400px;
+   width: 800px;
+   height: 600px;
    opacity: 0;
    animation: fadeInScale 1.5s ease-out 2s forwards;
  }
@@ -531,8 +529,8 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
    }
 
    .lottie-container {
-     width: 250px;
-     height: 250px;
+     width: 600px;
+     height: 500px;
    }
 
    .description {
@@ -550,8 +548,8 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
    }
 
    .lottie-container {
-     width: 200px;
-     height: 200px;
+     width: 450px;
+     height: 400px;
    }
  }
 
