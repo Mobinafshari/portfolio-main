@@ -825,7 +825,7 @@ a {
 .Animated-Radial-Menu {
   position: fixed;
   right: 10vw;
-  top: 0;
+  top: 2vh;
   z-index: 100;
 }
 
