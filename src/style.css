@@ -114,6 +114,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -260,11 +261,16 @@ Main Section
   position: fixed;
   transition: all 1s ease-in-out ;
 }
+@media screen and (max-width : 992px) {
+  .shape{
+    display:   none;
+  }
+}
 .shape-1{
   top: 10vh;
   left: 50vw;
 }.shape-2{
-  top: 25vh;
+  top: 35vh;
   left: 80vw;
 }.shape-3{
   top: 60vh;
@@ -281,6 +287,10 @@ Main Section
 }.shape-7{
   top: 15vh;
   left: 25vw;
+}
+.shape-8{
+  top: 40vh;
+  left: 30vw;
 }
 /*
   Transition for theme toggling
@@ -801,3 +811,86 @@ a {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
+
+/*
+  Animated Menu
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Animated-Radial-Menu {
+  position: fixed;
+  right: 10vw;
+  top: 0;
+  z-index: 100;
+}
+
+.Animated-Radial-Menu .menu {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Animated-Radial-Menu .menu .toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #2f363e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 2em;
+  transition: transform 0.5s;
+}
+
+.Animated-Radial-Menu .menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.3s;
+  transition-delay: calc(0.04s * var(--i));
+  transform: rotate(0deg) translateX(110px);
+  transform-origin: 140px;
+}
+
+.Animated-Radial-Menu .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: var(--clr);
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  font-size: 1.5em;
+  transform: rotate(calc(-45deg * var(--i)));
+  transition: 0.3s;
+}
+
+.Animated-Radial-Menu .menu li a:hover {
+  background: var(--clr);
+  color: #333;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+
+.Animated-Radial-Menu .menu.active .toggle {
+  transform: rotate(315deg);
+}
+
+.Animated-Radial-Menu .menu.active li {
+  transform: rotate(calc(45deg * var(--i))) translateX(0px);
+}
+
+/*# sourceMappingURL=Animated-Radial-Menu.css.map */
