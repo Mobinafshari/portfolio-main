@@ -46,3 +46,27 @@ moon.addEventListener("click", () => {
 //     gradientBackground.destroy();
 //   }
 // });
+
+const shape = document.getElementsByClassName("shape");
+document.addEventListener("mouseover", () => {
+  for (let i = 0; i < shape.length; i++) {
+    shape[i].style.transform = `translateX(${
+      Math.random() * (i % 2 === 0 ? 100 : -100)
+    }px)`;
+  }
+});
+const spotlight = document.getElementById("spotlight");
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+
+  const spotlightColor =
+    currentTheme === "dark"
+      ? `radial-gradient(circle at ${x}px ${y}px, rgba(72, 61, 139, 0.4) 0%, rgba(138, 43, 226, 0.2) 20%, transparent 40%)`
+      : `radial-gradient(circle at ${x}px ${y}px, rgba(255, 183, 77, 0.4) 0%, rgba(255, 105, 180, 0.2) 20%, transparent 40%)`;
+
+  spotlight.style.background = spotlightColor;
+});

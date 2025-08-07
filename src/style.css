@@ -37,7 +37,7 @@
   --clr-primary-300: hsla(200, 90%, 20%, 1);
   --clr-primary-400: hsla(200, 80%, 30%, 1);
   --clr-primary-500: hsla(200, 100%, 40%, 1);
-
+  --clr-background-check : #213448;
   --clr-neutral-100: hsla(0, 0%, 10%, 1);
   --clr-neutral-200: hsla(0, 0%, 70%, 1);
   --clr-neutral-300: hsla(0, 0%, 60%, 1);
@@ -117,6 +117,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+
 }
 
 /* A elements that don't have a class get default styles */
@@ -164,6 +165,7 @@ body {
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
   background-color: var(--clr-neutral-100);
+  position: relative;
 }
 
 h1,
@@ -244,7 +246,42 @@ Main Section
   padding: 0;
   position: relative;
 }
-
+#spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(72, 61, 139, 0.3) 0%, rgba(138, 43, 226, 0.1) 20%, transparent 40%);  z-index: 0;
+  transition: background-position 0.05s;
+}
+.shape{
+  position: fixed;
+  transition: all 1s ease-in-out ;
+}
+.shape-1{
+  top: 10vh;
+  left: 50vw;
+}.shape-2{
+  top: 25vh;
+  left: 80vw;
+}.shape-3{
+  top: 60vh;
+  left: 30vw;
+}.shape-4{
+  top: 70vh;
+  right: 30vw;
+}.shape-5{
+  top: 70vh;
+  left: 20vw;
+}.shape-6{
+  top: 90vh;
+  left: 80vw;
+}.shape-7{
+  top: 15vh;
+  left: 25vw;
+}
 /*
   Transition for theme toggling
 */
@@ -388,7 +425,7 @@ Main Hero
  }
 
  .intro-greeting {
-   font-size: 1.5rem;
+   font-size: 2rem;
    color: var(--clr-neutral-300);
    font-weight: 300;
    margin-bottom: 1rem;
@@ -399,7 +436,7 @@ Main Hero
 
  .intro-name {
    font-family: 'Orbitron', monospace;
-   font-size: 3.5rem;
+   font-size: 4rem;
    font-weight: 900;
 background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
    background-size: 400% 400%;
@@ -412,7 +449,7 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
  }
 
  .intro-title {
-   font-size: 1.8rem;
+   font-size: 2.2rem;
    color: var(--clr-neutral-900);
    font-weight: 500;
    letter-spacing: 0.05em;
@@ -422,7 +459,7 @@ background: linear-gradient(135deg, #0D47A1, #880E4F, #F57F17, #1B5E20);
  }
 
  .intro-subtitle {
-   font-size: 1.1rem;
+   font-size: 1.8rem;
   color: var(--clr-neutral-300);
      font-weight: 400;
    opacity: 0;
