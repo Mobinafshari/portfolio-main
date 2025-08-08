@@ -307,7 +307,7 @@ Main Section
     clip-path: circle(0% at 50% 0%);
   }
   to{
-    clip-path: circle(120% at 50% 0%);
+    clip-path: circle(130% at 50% 0%);
   }
 }
 
@@ -893,4 +893,55 @@ a {
   transform: rotate(calc(45deg * var(--i))) translateX(0px);
 }
 
-/*# sourceMappingURL=Animated-Radial-Menu.css.map */
+
+/*
+  About me
+*/
+.about-me{
+  position: relative;
+  z-index: 500;
+  gap: 16px ;
+  margin: 100px 0 200px 0;
+  text-align: center;
+  margin-inline-start: 5rem;
+  
+}
+
+.avatar{
+  width: 180px;
+  height: 180px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  shape-outside: circle();
+  -webkit-shape-outside :circle();
+  animation: move-in ease-in-out 0.5s;
+    animation-range: cover 0% cover 100%;
+    animation-timeline: scroll();
+}
+.about-me p {
+  font-size: 24px;
+  color: var(--clr-neutral-900);
+  text-align: start;
+  max-width: 59.5vw;
+  animation: fade-in ease-in-out 0.5s;
+    animation-range: cover 0% cover 100%;
+    animation-timeline: scroll();
+}
+@keyframes move-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0) ;
+    
+  }
+}
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
