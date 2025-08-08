@@ -78,3 +78,24 @@ let menu = document.querySelector(".menu");
 toggle.onclick = () => {
   menu.classList.toggle("active");
 };
+
+// handle closing menu on the scroll
+const mainSection = document.querySelector(".main-section");
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        menu.classList.add("active");
+      } else {
+        menu.classList.remove("active");
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+
+// Start observing
+observer.observe(mainSection);
