@@ -892,7 +892,14 @@ a {
 .Animated-Radial-Menu .menu.active li {
   transform: rotate(calc(45deg * var(--i))) translateX(0px);
 }
-
+@media screen and (max-width : 992px) {
+  .menu{
+    display: none;
+  }
+  .Animated-Radial-Menu{
+    display: none;
+  }
+}
 
 /*
   About me
@@ -903,8 +910,11 @@ a {
   gap: 16px ;
   margin: 100px 0 200px 0;
   text-align: center;
-  margin-inline-start: 5rem;
+  margin-inline-start: 4.5vw;
   
+}
+.about-me__wrapper{
+  padding-inline-start: 4.5vw;
 }
 
 .avatar{
@@ -923,7 +933,7 @@ a {
   font-size: 24px;
   color: var(--clr-neutral-900);
   text-align: start;
-  max-width: 59.5vw;
+  max-width: 65vw;
   animation: fade-in ease-in-out 0.5s;
     animation-range: cover 0% cover 100%;
     animation-timeline: scroll();
@@ -944,5 +954,28 @@ a {
     opacity: 0;
   }to{
     opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .avatar{
+    float: none;
+    width: 120px;
+    height: 120px;
+  }
+  .about-me__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-inline-start: 0;
+  }
+  .about-me p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+  .about-me{
+    margin-inline-start: 0;
+    padding: 0 8px;
+    margin-top: 0;
   }
 }
